@@ -8,7 +8,6 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
 // Characters can be add in a password 
 var charTypes = {
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -16,6 +15,11 @@ var charTypes = {
   numbers: "1234567890",
   special: "!$%^&*()-=+[]{};#:@~,./<>?",
 }
+// Generate random password function
+function generatePassword() {
+  
+// Prompt the user to enter a desired password length 
+var passwordLength = prompt("How many characters would you like your password to be?");
 
 // Copy Password button 
 function copyPassword() {
