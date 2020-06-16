@@ -15,6 +15,23 @@ var charTypes = {
   numbers: "1234567890",
   special: "!$%^&*()-=+[]{};#:@~,./<>?",
 }
+// Variable Declaration
+var uppercaseOptions = charTypes.uppercase.split("");
+  console.log(uppercaseOptions);
+  console.log(uppercaseOptions[5]);
+
+  var lowercaseOptions = charTypes.lowercase.split("");
+  console.log(lowercaseOptions);
+
+  var numberOptions = charTypes.numbers.split("");
+  console.log(numberOptions);
+
+  var specialOptions = charTypes.special.split("");
+  console.log(specialOptions);
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+}
 // Generate a random password function
 function generatePassword() {
 // Tell the user to enter a desired password length 
@@ -31,6 +48,7 @@ else {
   var includeNumeric = confirm("Would you like numbers?");
   var includeSpecialChar = confirm("Would you like special characters?");
 }
+
 // Copy Password button 
 function copyPassword() {
   var copyBtn = document.querySelector("#copy");
@@ -40,3 +58,4 @@ function copyPassword() {
 copyBtn.addEventListener("click", copyPassword); 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+}
