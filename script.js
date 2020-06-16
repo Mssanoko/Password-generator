@@ -15,12 +15,22 @@ var charTypes = {
   numbers: "1234567890",
   special: "!$%^&*()-=+[]{};#:@~,./<>?",
 }
-// Generate random password function
+// Generate a random password function
 function generatePassword() {
-  
-// Prompt the user to enter a desired password length 
+// Tell the user to enter a desired password length 
 var passwordLength = prompt("How many characters would you like your password to be?");
 
+  // Password  must be between 8 and 128 characters 
+  if (passwordLength < 8 || passwordLength > 128) {
+    return alert("Enter a character length between 8 and 128.");
+  }
+// Ask the user his criteria for the password 
+else {
+  var includeUppercase = confirm("Would you like uppercase letters?");
+  var includeLowercase = confirm("Would you like lowercase letters?");
+  var includeNumeric = confirm("Would you like numbers?");
+  var includeSpecialChar = confirm("Would you like special characters?");
+}
 // Copy Password button 
 function copyPassword() {
   var copyBtn = document.querySelector("#copy");
