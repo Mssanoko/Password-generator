@@ -9,9 +9,13 @@ function writePassword() {
   passwordText.value = password;
 }
 
-
-
-
+// Characters can be add in a password 
+var charTypes = {
+  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowercase: "abcdefghijklmnopqrstuvwxyz",
+  numbers: "1234567890",
+  special: "!$%^&*()-=+[]{};#:@~,./<>?",
+}
 
 // Copy Password button 
 function copyPassword() {
