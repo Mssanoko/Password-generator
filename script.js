@@ -19,5 +19,6 @@ function copyPassword() {
   password.select(); 
   document.execCommand("copy");
 }
+copyBtn.addEventListener("click", copyPassword); 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
