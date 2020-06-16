@@ -8,8 +8,8 @@ function writePassword() {
 
   passwordText.value = password;
 }
-// Various Arrays 
 
+// Values from each criteria assigned to a variable
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -22,32 +22,24 @@ var confirmNumericCharacter;
 var confirmUpperCase;
 var confirmLowerCase;
 
-//GIVEN I need a new, secure password
-//WHEN I click the button to generate a password
-generateBtn.addEventListener("click", writePassword);
+//Generate random password
+function generatePassword() {
 
-//THEN I am presented with a series of prompts for password criteria
-//WHEN prompted for password criteria
+//Ask the user to enter a desired password length 
+var confirmLength = (prompt("How many characters would you like your password to be?"));
+}
 
-//THEN I select which criteria to include in the password
-//WHEN prompted for the length of the password
-
-//THEN I choose a length of at least 8 characters and no more than 128 characters
-//WHEN prompted for character types to include in the password
-if (passwordLength < 8 || passwordLength > 128) {
+// Password length of at least 8 characters and no more than 128 characters
+while (confirmLength < 7 || confirmLength > 129) {
   return alert("Enter a character length between 8 and 128.");
 }
 
-//THEN I choose lowercase, uppercase, numeric, and/or special characters
-//WHEN I answer each prompt
+// Determine parameters of password 
+var confirmSpecialCharacter = confirm("Click OK to confirm if you would like to include special characters");
+var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
+var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
+var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");
 
-//THEN my input should be validated and at least one character type should be selected
-//WHEN all prompts are answered
-
-//THEN a password is generated that matches the selected criteria
-//WHEN the password is generated
-
-//THEN the password is either displayed in an alert or written to the page
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
