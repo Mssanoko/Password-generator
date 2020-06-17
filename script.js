@@ -31,7 +31,7 @@ var uppercaseOptions = charTypes.uppercase.split("");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-}
+
 // Generate a random password function
 function generatePassword() {
 // Tell the user to enter a desired password length 
@@ -48,6 +48,14 @@ else {
   var includeNumeric = confirm("Would you like numbers?");
   var includeSpecialChar = confirm("Would you like special characters?");
 }
+ // If there is no character types, a password can't be generated 
+ if (
+  includeLowercase === false &&
+  includeUppercase === false &&
+  includeNumeric === false &&
+  includeSpecialChar === false
+) {
+  return alert("At least one character type must be selected to generate a password.");
 
 // Copy Password button 
 function copyPassword() {
