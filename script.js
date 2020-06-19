@@ -39,15 +39,16 @@ var passwordLength = prompt("How many characters would you like your password to
 
   // Password  must be between 8 and 128 characters 
   if (passwordLength < 8 || passwordLength > 128) {
-    return alert("Enter a character length between 8 and 128.");
+  // If the character is not between 8 and 128
+    return alert("You must choose a character between 8 and 128.");
   }
 // Ask the user his criteria for the password 
 else {
-  var includeUppercase = confirm("Would you like uppercase letters?");
-  var includeLowercase = confirm("Would you like lowercase letters?");
-  var includeNumeric = confirm("Would you like numbers?");
-  var includeSpecialChar = confirm("Would you like special characters?");
-}
+  var includeUppercase = confirm("Do you want uppercase letters?");
+  var includeLowercase = confirm("Do you want lowercase letters?");
+  var includeNumeric = confirm("Do you want numbers?");
+  var includeSpecialChar = confirm("Do you want special characters?");
+
  // If there is no character types, a password can't be generated 
  if (
   includeLowercase === false &&
@@ -55,7 +56,78 @@ else {
   includeNumeric === false &&
   includeSpecialChar === false
 ) {
-  return alert("At least one character type must be selected to generate a password.");
+  return alert("One character type must be selected to generate a password.");
+} else {
+
+  // for loop for the length of the password length to choose the character types and add characters to a PW string value 
+  var passwordArray=[];
+  for (i = 0; i < parseInt(passwordLength); i++) {
+
+    if (
+      includeUppercase === true
+    ) {
+      //Math random to get an array index position and then add character to password string 
+
+      var a = uppercaseOptions[Math.floor(Math.random() * uppercaseOptions.length)];
+      console.log(a);
+      passwordArray.push(a);
+      console.log(passwordArray.length);
+    }
+
+    if (parseInt(passwordLength) == passwordArray.length) {
+      break;
+    }
+
+    if (
+      includeLowercase === true
+    ) {
+      //Math random to get an array index position and then add character to password string 
+
+      var b = lowercaseOptions[Math.floor(Math.random() * lowercaseOptions.length)];
+      console.log(b);
+      passwordArray.push(b);
+    }
+
+    if (passwordLength == passwordArray.length) {
+      break;
+    }
+
+    if (
+      includeNumeric === true
+    ) {
+      //Math random to get an array index position and then add character to password string 
+
+      var c = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+      console.log(c);
+      passwordArray.push(c);
+
+    }
+
+    if (passwordLength == passwordArray.length) {
+      break;
+    }
+
+    if (
+      includeSpecialChar === true
+    ) {
+      //Math random to get an array index position and then add character to password string 
+
+      var d = specialOptions[Math.floor(Math.random() * specialOptions.length)];
+      console.log(d);
+      passwordArray.push(d);
+
+  }
+
+  if (passwordLength == passwordArray.length) {
+    break;
+  }
+
+    
+  } 
+} console.log(passwordArray.join(""));
+return passwordArray.join(""); 
+}
+
 
 // Copy Password button 
 function copyPassword() {
