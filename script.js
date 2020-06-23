@@ -35,7 +35,7 @@ generateBtn.addEventListener("click", writePassword);
 // Generate a random password function
 function generatePassword() {
 // Tell the user to enter a desired password length 
-var passwordLength = prompt("How many characters would you like your password to be?");
+var passwordLength = prompt("How many characters would you like your password to be? Must be between 8 and 128 characters.");
 
   // Password  must be between 8 and 128 characters 
   if (passwordLength < 8 || passwordLength > 128) {
