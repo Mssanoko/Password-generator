@@ -4,8 +4,9 @@ The URL of the GitHub repository : https://mssanoko.github.io/Password-generator
 
 This app should randomly generate a password.
 
-Click on generate password button and you should choose for a length between 8 and 128.
-Also choose for a character type to generate a password.
+Click on generate password button and you should choose for a length between 8 and 128. (i.e. character types, length, symbols, etc. to be included in the password)
+
+Also choose for a character type to generate a password, at least one character must be selected.
 
 ![Screen Shot 2020-06-25 at 11 14 25 AM](https://user-images.githubusercontent.com/61078512/85750747-fb62c700-b6d7-11ea-991c-149aceaf73c0.png)
 ![Screen Shot 2020-06-25 at 11 14 37 AM](https://user-images.githubusercontent.com/61078512/85750749-fb62c700-b6d7-11ea-9452-8972824ff610.png)
